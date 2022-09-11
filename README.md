@@ -27,4 +27,4 @@ sudo chmod +x hack
 
 ```
 
-5. It will produce an 'out.hack' file
+5. It will produce an 'out.hack' file and print source code to terminal

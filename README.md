@@ -1,12 +1,12 @@
 # Hack Assembler
 
-Assembler for Hack Computer.
+Assembler for Hack Computer, implementd in Rust.
+
+It generates sudo binary from (.asm) files.
 
 Built to assemble hack assembly language from the Nand to Tetris course.
 
-Project build using rust.
-
-It assembles hach symbolic language into hack binary code.
+It assembles hach symbolic (.asm) language into hack binary code.
 
 ## Usage
 
@@ -23,7 +23,7 @@ sudo chmod +x hack
 4. Run hack program
 
 ```
-./hack program.asm
+./hack {filename}.asm
 
 ```
 

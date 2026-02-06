@@ -20,7 +20,6 @@ The project is built on a modular design, separating concerns between:
 ```
 git clone [your-repo-link]
 make build
-chmod +x hack
 ```
 
 **2. Assemble a File**

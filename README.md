@@ -17,8 +17,11 @@ The project is built on a modular design, separating concerns between:
 ### 🚀 Usage
 
 **1. Clone and Prepare**
+```
 git clone [your-repo-link]
+make build
 chmod +x hack
+```
 
 **2. Assemble a File**
 Ensure your `.asm` file is in the working directory:

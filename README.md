@@ -1,28 +1,30 @@
-# Hack Assembler
+# Hack Assembler | Systems Logic & Binary Translation
 
-Assembler for Hack Computer, implementd in Rust. It generates sudo binary from (.asm) files.
+A robust two-pass assembler written in Rust, designed to translate symbolic Hack Assembly (.asm) into 16-bit binary machine code. This project demonstrates foundational knowledge of deterministic translation, symbol table management, and bit-level instruction encoding.
 
-Built to assemble hack assembly language from the Nand to Tetris course.
+### 🛠 Technical Highlights
+* **Two-Pass Translation Logic:** Engineered a two-pass architecture to handle forward-referencing labels. The first pass populates the Symbol Table with memory addresses; the second pass performs the final opcode generation.
+* **Symbol Table Management:** Implemented an efficient mapping system to resolve symbolic labels and variables to specific physical memory addresses within the Hack RAM/ROM.
+* **Lexical Analysis & Parsing:** Developed a modular parser to distinguish between A-instructions (addresses) and C-instructions (computations), handling mnemonics for the ALU, destination registers, and jump conditions.
+* **Binary Encoding:** Performs direct bit-manipulation to encode symbolic mnemonics into the precise 16-bit binary format required by the Hack CPU.
 
-It assembles hach symbolic (.asm) language into hack binary code.
+### 🏗 Architecture
+The project is built on a modular design, separating concerns between:
+1. **Parser:** Handles string manipulation and instruction identification.
+2. **Code Module:** Translates mnemonics into their binary equivalents.
+3. **Symbol Table:** Manages label-to-address mappings.
 
-## Usage
+### 🚀 Usage
 
-1. Clone the repo
-2. Change mode of hack binary to executable
+**1. Clone and Prepare**
+git clone [your-repo-link]
+chmod +x hack
 
-```
-sudo chmod +x hack
-
-```
-
-3. Have test .asm file current working directory
-
-4. Run hack program
-
+**2. Assemble a File**
+Ensure your `.asm` file is in the working directory:
 ```
 ./hack {filename}.asm
-
 ```
 
-5. It will produce an 'out.hack' file and print source code to terminal
+**3. Output**
+The program generates an `out.hack` file containing the binary machine code and logs the translation process to the terminal.
